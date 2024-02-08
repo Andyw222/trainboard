@@ -4,7 +4,7 @@
 
 _In below tables, all pin references on the RGB side are referenced as excel cells, i.e. the top-left on input is A1 and bottom-right on output is D8_
 
-### ESP to IN on RGB (1/8 Scan, 16x32 Resolution)
+### ESP8266 to IN on RGB (1/8 Scan, 16x32 Resolution)
 ```
 D0  > B7 # STB/LAT
 D1  > A5 # A
@@ -17,7 +17,7 @@ D8  > A6 # C (for 1/8 scan rate and above)
 GND > B4 # Additional ground / unused multiplex input
 ```
 
-### ESP to IN on RGB (1/16 Scan, 32x64 Resolution)
+### ESP8266 to IN on RGB (1/16 Scan, 32x64 Resolution)
 ```
 D0  > B7 # STB/LAT
 D1  > A5 # A
@@ -30,6 +30,18 @@ D8  > A6 # C (for 1/8 scan rate and above)
 GND > B4 # Additional ground / unused multiplex input
 ```
 
+### ESP32 to IN on RGB (1/16 Scan, 32x64 Resolution)
+```
+G16 > B7 # STB/LAT
+G5  > A5 # A
+G4  > B5 # B
+G17 > A8 # P_OE
+G18 > B6 # D (for 1/16 scan rate and above)
+G19 > A7 # CLK
+G13 > A1 # R0 (or R1 where your board begins counting from 1)
+G21 > A6 # C (for 1/8 scan rate and above)
+GND > B4 # Additional ground / unused multiplex input
+```
 ### IN to OUT on RGB
 ```
 A4 > C2
